@@ -1,7 +1,5 @@
 function newItem() {
     var input = document.getElementById('input');
-    input.focus();
-    input.select();
 	var item = input.value;
 	var ul = document.getElementById("list");
 	var li = document.createElement('li');
@@ -19,4 +17,11 @@ document.body.onkeyup = function(e){
 
 function removeItem(e) {
   e.target.parentElement.removeChild(e.target);
+}
+
+function toggleDarkMode() {
+  var head = document.getElementById("input")
+  var body = document.getElementById("body")
+  input.classList.toggle("dark-mode");
+  body.classList.toggle("dark-mode");
 }

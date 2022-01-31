@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
+   <head id="head">
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="style.css" />
       <title>
          To-do List
       </title>
+      <button onclick="toggleDarkMode()">Toggle Theme</button>
    </head>
-   <body>
-      <input id="input" placeholder="Just Start Typing!">
+   <body id="body">
+      <input id="input" placeholder="Just Start Typing!" autofocus>
       <ul id="list"></ul> 
    </body>
    <script src="app.js"></script>
