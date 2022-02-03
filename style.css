@@ -24,9 +24,17 @@ button {
 	border-radius: 10px;
 
 	position: absolute;
+}
+
+#dark {
 	top: 1%;
 	right: 1%;
-  }
+}
+
+#light {
+	top: 7%;
+	right: 1%;
+}
 
 input:focus {
 	outline:none;
@@ -34,19 +42,48 @@ input:focus {
 
 li { 
 	text-align: left;
-	line-height: 50px;
-	font-size: 40px;
+	line-height: 40px;
+	font-size: 35px;
 	list-style: none;
 	margin: 0;
 }
 
 li:hover {
 	text-decoration: line-through;
-	font-size: 35px;
 	color: grey;
 }
 
 .dark-mode {
-	background-color: rgb(40, 40, 40);
+	background-color: rgb(56, 52, 52);
 	color: white;
-  }
+	animation-name: toDark;
+	animation-duration: 0.25s;
+	animation-timing-function: ease-in;
+}
+
+@keyframes toDark {
+	0%   {background-color:rgb(255, 255, 255); left:0px; top:0px;}
+	20%  {background-color:rgb(212, 212, 212); top:0px;}
+	40%  {background-color:rgb(169, 169, 169); top:0px;}
+	60%  {background-color:rgb(126, 126, 126); top:0px;}
+	80%  {background-color:rgb(83, 83, 83); top:0px;}
+	100% {background-color:rgb(40, 40, 40); left:0px; top:0px;}
+}
+
+.light-mode {
+	background-color: rgb(255, 255, 255);
+	color: rgb(71, 60, 60);
+	animation-name: toLight;
+	animation-duration: 0.25s;
+	animation-timing-function: ease-in;
+	animation-direction: reverse;
+}
+
+@keyframes toLight {
+	0%   {background-color:rgb(255, 255, 255); left:0px; top:0px;}
+	20%  {background-color:rgb(212, 212, 212); top:0px;}
+	40%  {background-color:rgb(169, 169, 169); top:0px;}
+	60%  {background-color:rgb(126, 126, 126); top:0px;}
+	80%  {background-color:rgb(83, 83, 83); top:0px;}
+	100% {background-color:rgb(40, 40, 40); left:0px; top:0px;}
+}

@@ -25,3 +25,10 @@ function toggleDarkMode() {
   input.classList.toggle("dark-mode");
   body.classList.toggle("dark-mode");
 }
+
+function toggleLightMode() {
+  var head = document.getElementById("input")
+  var body = document.getElementById("body")
+  input.classList.toggle("light-mode");
+  body.classList.toggle("light-mode");
+}
